@@ -1,5 +1,5 @@
 # JohncentVentura.github.io
-My Personal Portfolio Website
+Personal Portfolio Website
 By Carlos Johncent Ventura
 
 # Timeline
