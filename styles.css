@@ -50,7 +50,7 @@ nav {
   left: 0;
   z-index: 10;
   padding: 0 2rem 0 1.5rem;
-  width: 100%;
+  width: 100vw;
   height: var(--height-navbar);
   background: linear-gradient(180deg, var(--color-grey-5), var(--color-primary));
   display: flex;
@@ -318,6 +318,20 @@ hr {
   height: 2.5rem;
 }
 
+.portfolio-left-shape {
+  top: 0;
+  left: 0;
+  -webkit-clip-path: polygon(50% 0, 0 0, 0 25%);
+          clip-path: polygon(50% 0, 0 0, 0 25%);
+}
+
+.portfolio-right-shape {
+  top: 0;
+  right: 0;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 0);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 0);
+}
+
 .shape {
   position: absolute;
   z-index: -1;
@@ -557,5 +571,17 @@ hr {
     transform: translate(-50%, -50%);
     color: var(--color-grey-4);
     font-size: 5rem;
+  }
+  .portfolio-left-shape {
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(50% 0, 0 0, 0 15%);
+            clip-path: polygon(50% 0, 0 0, 0 15%);
+  }
+  .portfolio-right-shape {
+    top: 0;
+    right: 0;
+    -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 0);
+            clip-path: polygon(50% 0%, 100% 15%, 100% 0);
   }
 }/*# sourceMappingURL=styles.css.map */

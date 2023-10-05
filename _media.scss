@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 1140px) {
     .home-container {
         .home-left-cont {
@@ -36,31 +35,31 @@
         }
     }
 
-    .about-container{
+    .about-container {
         padding: 2rem 4rem 0 3rem;
         gap: 2rem;
 
-        h3{
+        h3 {
             font-size: 1rem;
         }
 
-        .about-1st-cont{
-            p{
+        .about-1st-cont {
+            p {
                 font-size: 1rem;
             }
         }
 
-        .about-2nd-cont{
-            ul{
+        .about-2nd-cont {
+            ul {
                 .timeline-when {
                     font-size: 0.9rem;
                 }
-    
+
                 .timeline-what {
                     font-size: 0.9rem;
                     font-weight: 600;
                 }
-    
+
                 .timeline-where {
                     font-size: 0.9rem;
                     font-weight: 400;
@@ -93,31 +92,31 @@
         }
     }
 
-    .about-container{
+    .about-container {
         padding: 1rem 4rem 0 3rem;
         gap: 1.5rem;
 
-        h3{
+        h3 {
             font-size: 1rem;
         }
 
-        .about-1st-cont{
-            p{
+        .about-1st-cont {
+            p {
                 font-size: 0.8rem;
             }
         }
 
-        .about-2nd-cont{
-            ul{
+        .about-2nd-cont {
+            ul {
                 .timeline-when {
                     font-size: 0.8rem;
                 }
-    
+
                 .timeline-what {
                     font-size: 0.8rem;
                     font-weight: 400;
                 }
-    
+
                 .timeline-where {
                     font-size: 0.8rem;
                     font-weight: 200;
@@ -186,7 +185,7 @@
         .home-right-cont {
             padding: 0;
 
-            .home-image{
+            .home-image {
                 ///*
                 position: absolute;
                 top: 9rem;
@@ -204,39 +203,39 @@
         left: 0;
         clip-path: polygon(50% 0, 0 0, 0 15%);
     }
-    
+
     .about-right-shape {
         bottom: 0;
         right: 0;
         clip-path: polygon(50% 100%, 100% 85%, 100% 100%, 0 100%, 0 85%);
     }
 
-    .about-container{
+    .about-container {
         padding: 1rem 4rem 0 3rem;
         grid-template-columns: 1fr;
         gap: 0.5rem;
 
-        h3{
+        h3 {
             font-size: 0.9rem;
         }
 
-        .about-1st-cont{
-            p{
+        .about-1st-cont {
+            p {
                 font-size: 0.9rem;
             }
         }
 
-        .about-2nd-cont{
-            ul{
+        .about-2nd-cont {
+            ul {
                 .timeline-when {
                     font-size: 0.8rem;
                 }
-    
+
                 .timeline-what {
                     font-size: 0.8rem;
                     font-weight: 500;
                 }
-    
+
                 .timeline-where {
                     font-size: 0.8rem;
                     font-weight: 400;
@@ -249,12 +248,12 @@
         position: relative;
         margin-top: 4%;
         width: 100vw;
-    
+
         h3 {
             text-align: center;
             text-transform: uppercase;
             font-size: 1rem;
-    
+
             span {
                 color: var(--color-secondary);
             }
@@ -264,16 +263,16 @@
     .section-title {
         margin: 2.5rem 0 1.5rem 0;
         text-align: center;
-    
+
         h2 {
             position: relative;
             text-transform: uppercase;
             font-size: 2rem;
-    
+
             span {
                 color: var(--color-secondary);
             }
-    
+
             i {
                 position: absolute;
                 top: 50%;
@@ -285,4 +284,19 @@
             }
         }
     }
+
+    //Portfolio Section
+
+    .portfolio-left-shape {
+        top: 0;
+        left: 0;
+        clip-path: polygon(50% 0, 0 0, 0 15%);
+    }
+
+    .portfolio-right-shape {
+        top: 0;
+        right: 0;
+        clip-path: polygon(50% 0%, 100% 15%, 100% 0);
+    }
+
 }

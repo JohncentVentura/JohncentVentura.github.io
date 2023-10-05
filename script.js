@@ -7,7 +7,7 @@ function ChangeTheme() {
     })
 }
 
-function MoveSkillImages(){
+function MoveSkillImages() {
     const track = document.getElementById("skill-track"); //If you want to access any element in an HTML page, you always start with accessing the document object
 
     //The window object is supported by all browsers. It represents the browser's window. The onmousedown event occurs when a user presses a mouse button over an HTML element.
@@ -48,6 +48,20 @@ function MoveSkillImages(){
 
         console.log("MovingSkillImage");
     }
+
+    /* -- Had to add extra lines for touch events -- */
+
+    window.onmousedown = e => handleOnDown(e);
+
+    window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+    window.onmouseup = e => handleOnUp(e);
+
+    window.ontouchend = e => handleOnUp(e.touches[0]);
+
+    window.onmousemove = e => handleOnMove(e);
+
+    window.ontouchmove = e => handleOnMove(e.touches[0]);
 }
 
 ChangeTheme();
