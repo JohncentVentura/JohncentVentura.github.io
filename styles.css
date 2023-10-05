@@ -221,7 +221,7 @@ hr {
 }
 
 .about-container {
-  padding: 4rem 5rem 0 4rem;
+  padding: 2rem 5rem 0 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -342,7 +342,7 @@ hr {
 }
 
 .section-title {
-  margin: 2rem 0 2rem 0;
+  margin: 2% 0 4rem 0;
   text-align: center;
 }
 .section-title h2 {
@@ -539,20 +539,44 @@ hr {
     font-weight: 400;
   }
   .skill-cont {
-    position: relative;
-    margin-top: 4%;
-    width: 100vw;
+    margin-top: 1.5%;
   }
   .skill-cont h3 {
-    text-align: center;
-    text-transform: uppercase;
+    margin-left: 3rem;
+    text-align: left;
     font-size: 1rem;
   }
-  .skill-cont h3 span {
-    color: var(--color-secondary);
+  .skill-cont .about-guide {
+    display: none;
+  }
+  .skill-cont #skill-track {
+    margin-top: 2%;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .skill-cont #skill-track .skill-image {
+    border: 2px solid var(--color-secondary);
+    border-radius: 10px;
+    width: 20vmin;
+    height: 20vmin;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .portfolio-left-shape {
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(50% 0, 0 0, 0 15%);
+            clip-path: polygon(50% 0, 0 0, 0 15%);
+  }
+  .portfolio-right-shape {
+    top: 0;
+    right: 0;
+    -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 0);
+            clip-path: polygon(50% 0%, 100% 15%, 100% 0);
   }
   .section-title {
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 2% 0 1.5rem 0;
     text-align: center;
   }
   .section-title h2 {
@@ -571,17 +595,5 @@ hr {
     transform: translate(-50%, -50%);
     color: var(--color-grey-4);
     font-size: 5rem;
-  }
-  .portfolio-left-shape {
-    top: 0;
-    left: 0;
-    -webkit-clip-path: polygon(50% 0, 0 0, 0 15%);
-            clip-path: polygon(50% 0, 0 0, 0 15%);
-  }
-  .portfolio-right-shape {
-    top: 0;
-    right: 0;
-    -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 0);
-            clip-path: polygon(50% 0%, 100% 15%, 100% 0);
   }
 }/*# sourceMappingURL=styles.css.map */

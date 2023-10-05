@@ -245,23 +245,53 @@
     }
 
     .skill-cont {
-        position: relative;
-        margin-top: 4%;
-        width: 100vw;
-
+        margin-top: 1.5%;
+        
         h3 {
-            text-align: center;
-            text-transform: uppercase;
+            margin-left: 3rem;
+            text-align: left;
             font-size: 1rem;
+        }
 
-            span {
-                color: var(--color-secondary);
+        .about-guide {
+            display: none;
+        }
+
+        #skill-track {
+            margin-top: 2%;
+            width: 100vw;
+            display: flex;
+            flex-flow: row wrap;
+
+            .skill-image {
+                border: 2px solid var(--color-secondary);
+                border-radius: 10px;
+                width: 20vmin;
+                height: 20vmin;
+                object-fit: cover;
+                //object-position: 100% center;
             }
         }
     }
 
+    //Portfolio Section
+
+    .portfolio-left-shape {
+        top: 0;
+        left: 0;
+        clip-path: polygon(50% 0, 0 0, 0 15%);
+    }
+
+    .portfolio-right-shape {
+        top: 0;
+        right: 0;
+        clip-path: polygon(50% 0%, 100% 15%, 100% 0);
+    }
+
+    
+// Independent Components
     .section-title {
-        margin: 2.5rem 0 1.5rem 0;
+        margin: 2% 0 1.5rem 0;
         text-align: center;
 
         h2 {
@@ -284,19 +314,4 @@
             }
         }
     }
-
-    //Portfolio Section
-
-    .portfolio-left-shape {
-        top: 0;
-        left: 0;
-        clip-path: polygon(50% 0, 0 0, 0 15%);
-    }
-
-    .portfolio-right-shape {
-        top: 0;
-        right: 0;
-        clip-path: polygon(50% 0%, 100% 15%, 100% 0);
-    }
-
 }
