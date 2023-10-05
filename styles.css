@@ -342,7 +342,7 @@ hr {
 }
 
 .section-title {
-  margin: 2% 0 4rem 0;
+  margin: 2rem 0 4rem 0;
   text-align: center;
 }
 .section-title h2 {
@@ -456,6 +456,7 @@ hr {
 }
 @media only screen and (max-width: 430px) {
   header nav {
+    position: fixed;
     padding: 0 1rem 0 1rem;
   }
   header nav .nav-div {
@@ -550,18 +551,23 @@ hr {
     display: none;
   }
   .skill-cont #skill-track {
-    margin-top: 2%;
-    width: 100vw;
+    position: static;
+    margin-top: 3%;
+    padding: 0 2rem 0 3.5rem;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
   }
   .skill-cont #skill-track .skill-image {
     border: 2px solid var(--color-secondary);
     border-radius: 10px;
-    width: 20vmin;
-    height: 20vmin;
+    width: 15vmin;
+    height: 15vmin;
     -o-object-fit: cover;
        object-fit: cover;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .portfolio-left-shape {
     top: 0;
@@ -576,7 +582,7 @@ hr {
             clip-path: polygon(50% 0%, 100% 15%, 100% 0);
   }
   .section-title {
-    margin: 2% 0 1.5rem 0;
+    margin: 2rem 0 1.5rem 0;
     text-align: center;
   }
   .section-title h2 {
