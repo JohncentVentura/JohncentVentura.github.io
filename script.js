@@ -50,8 +50,9 @@ function MoveSkillImages() {
     }
 
     /* -- Had to add extra lines for touch events -- */
+}
 
-    window.onmousedown = e => handleOnDown(e);
+window.onmousedown = e => handleOnDown(e);
 
     window.ontouchstart = e => handleOnDown(e.touches[0]);
 
@@ -62,7 +63,6 @@ function MoveSkillImages() {
     window.onmousemove = e => handleOnMove(e);
 
     window.ontouchmove = e => handleOnMove(e.touches[0]);
-}
 
 ChangeTheme();
 MoveSkillImages();
