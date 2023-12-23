@@ -1,6 +1,6 @@
 :root {
     --nav-height: 4rem;
-    --title-rem: 3rem;
+    --title-rem: 2.8rem;
     --title-icon-rem: 6rem;
     --small-rhombus-rem: 3rem;
     --large-rhombus-rem: 5rem;
@@ -61,6 +61,25 @@ nav {
     background-color: var(--nav-background-color);
     color: var(--nav-foreground-color);
 
+    .home-logo{
+        height: 100%;
+        a{
+            height: inherit;
+            font-size: var(--medium-rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--nav-foreground-color);
+            text-decoration: none;
+            transition: var(--default-transition);
+
+            &:hover{
+                color: var(--primary-color);
+                transition: var(--default-transition);
+            }
+        }
+    }
+
     ul {
         height: inherit;
         display: flex;
@@ -84,9 +103,16 @@ nav {
                     margin: 0 var(--xsmall-rem) 0 0;
                 }
 
+                /*
+                lord-icon{
+                    width: var(--medium-rem);
+                    height: inherit;
+                }*/
+
                 &:hover {
                     background-color: var(--primary-color);
                     color: var(--nav-background-color);
+                    cursor: pointer;
                 }
             }
         }
@@ -184,83 +210,68 @@ nav {
     padding: var(--nav-height) 20% 15%;
     width: 100%;
 
-    p {
-        font-size: var(--medium-rem);
-        line-height: var(--large-rem);
-        text-align: justify;
+    h2 {
+        margin: var(--xxlarge-rem) 0 0 0;
+        font-size: var(--large-rem);
+        text-align: center;
     }
 
-    ul {
-        margin: var(--xxlarge-rem) 0 0 0;
+    .skill-container {
+        padding: var(--xlarge-rem) 0 0 0;
         display: flex;
         flex-flow: row wrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        gap: var(--xxlarge-rem);
+        column-gap: var(--xxlarge-rem);
+        row-gap: var(--xxlarge-rem);
 
-        li {
+        a {
+            position: relative;
+            transform: rotate(45deg);
+            box-shadow: 0px 0px 0px 3px var(--primary-color);
+            width: var(--large-rhombus-rem);
+            height: var(--large-rhombus-rem);
             display: flex;
-            flex-flow: column nowrap;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            transition: var(--default-transition);
 
-            .skill-title {
-                margin: 0 0 var(--xlarge-rem) 0;
-                font-size: var(--medium-rem);
+            img,
+            div {
+                position: absolute;
+                transform: rotate(-45deg);
+                width: 70%;
+                height: 70%;
             }
 
-            .skill-image {
-                position: relative;
-                transform: rotate(45deg);
-                box-shadow: 0px 0px 0px 3px var(--primary-color);
-                width: var(--large-rhombus-rem);
-                height: var(--large-rhombus-rem);
+            img {
+                object-fit: cover;
+                visibility: visible;
+            }
+
+            div {
+                font-size: var(--small-rem);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                color: var(--foreground-color);
+                visibility: hidden;
+            }
+
+            &:hover {
+                transform: rotate(225deg);
+                background-color: var(--primary-color);
                 transition: var(--default-transition);
 
-                img,
-                div {
-                    position: absolute;
-                    transform: rotate(-45deg);
-                    width: 70%;
-                    height: 70%;
-                }
-
                 img {
-                    object-fit: cover;
-                    visibility: visible;
+                    visibility: hidden;
                 }
 
                 div {
-                    font-size: var(--small-rem);
-                    visibility: hidden;
-
-                }
-
-                &:hover {
-                    transform: rotate(225deg);
-                    background-color: var(--primary-color);
-                    transition: var(--default-transition);
-
-                    img {
-                        visibility: hidden;
-                    }
-
-                    div {
-                        transform: rotate(-225deg);
-                        visibility: visible;
-                    }
-                }
-
-                &:link {
-                    color: var(--foreground-color);
-                }
-
-                &:visited {
-                    color: var(--background-color);
+                    transform: rotate(-225deg);
+                    visibility: visible;
                 }
             }
         }
@@ -443,16 +454,34 @@ nav {
         }
 
         .personal-info {
-            font-size: var(--medium-rem);
-            line-height: var(--large-rem);
-            text-align: justify;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+            .personal-paragraph {
+                p {
+                    margin: 0 0 var(--medium-rem) 0;
+                    font-size: var(--medium-rem);
+                    line-height: var(--large-rem);
+                    text-align: justify;
+                }
+            }
+
         }
     }
 
+    h2 {
+        margin: var(--xxlarge-rem) 0 var(--large-rem) 0;
+        font-size: var(--large-rem);
+        text-align: center;
+    }
+
     .timeline-container {
-        h2 {
-            margin: var(--large-rem) 0 var(--xlarge-rem);
-        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: var(--large-rem);
 
         span {
             color: var(--primary-color);
@@ -469,15 +498,17 @@ nav {
             .timeline-when {
                 //border-radius: 15px;
                 padding: var(--xsmall-rem);
+                font-size: var(--small-rem);
+                text-transform: uppercase;
                 display: block;
                 background-color: var(--primary-color);
                 color: var(--background-color);
-                text-transform: uppercase;
                 transition: var(--default-transition);
             }
 
             .timeline-what {
                 margin-top: var(--xsmall-rem);
+                font-size: var(--small-rem);
                 font-weight: 600;
                 text-transform: uppercase;
             }
@@ -510,93 +541,60 @@ nav {
 
 #id-contact {
     position: relative;
-    padding: var(--nav-height) 0;
+    padding: var(--nav-height) 20% 15%;
     width: 100%;
 
-    .contact-container {
-        //margin: 6rem 0 0 0;
-        padding: 0 15%;
-        display: grid;
-        grid-template-columns: 0.7fr 1.3fr;
-        grid-template-rows: 1fr;
-        gap: var(--xlarge-rem);
+    h2 {
+        font-size: var(--medium-rem);
+        line-height: var(--large-rem);
+        text-align: center;
+    }
 
-        .contact-item-1 {
+    ul {
+        margin: var(--xxlarge-rem) 0 0 0;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        li {
+            width: 20%;
             display: flex;
             flex-flow: column nowrap;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
 
-            p {
-                margin: 0 0 var(--xlarge-rem) 0;
-                font-size: var(--large-rem);
-                line-height: var(--xlarge-rem);
-            }
+            .link {
+                box-shadow: 0px 0px 0px 3px var(--primary-color);
+                width: var(--large-rhombus-rem);
+                height: var(--large-rhombus-rem);
 
-            .contact-info {
-                margin: 0 0 var(--small-rem) 0;
-                width: 100%;
-                font-size: var(--medium-rem);
-                display: flex;
-                justify-content: space-between;
-                
-                .contact-icon {
-                    display: flex;
-                    align-items: center;
-
-                    div {
-                        margin: 0 0 0 var(--xsmall-rem);
-                    }
+                i {
+                    font-size: var(--xlarge-rem);
                 }
             }
 
-            .links-container {
+            .contact-title {
                 margin: var(--xlarge-rem) 0 0 0;
-                width: 100%;
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-evenly;
-                align-items: center;
-
-                .link-cv,
-                .link {
-                    margin: 0 var(--small-rem) 0 0;
-                }
+                font-size: var(--small-rem);
             }
-        }
 
-        .contact-item-2 {
-            form {
-                display: flex;
-                flex-flow: column wrap;
+            .contact-link,
+            span {
+                margin: var(--medium-rem) 0 0 0;
+                font-size: var(--small-rem);
+            }
 
-                #client-name,
-                #client-email,
-                #client-message {
-                    margin: 0 0 var(--medium-rem) 0;
-                    border-radius: 2px;
-                    outline: none;
-                    border: none;
-                    padding: var(--small-rem);
-                    width: 100%;
-                    height: 100%;
-                    font-family: inherit;
-                    font-size: inherit;
-                    font-weight: inherit;
-                    background-color: var(--grey-color);
-                    color: var(--foreground-color);
-                    resize: none;
-                    vertical-align: middle;
+            .contact-link {
+                color: var(--foreground-color);
+                text-decoration: underline;
+                transition: var(--default-transition);
+
+                &:hover {
+                    color: var(--primary-color);
+                    text-decoration: underline;
+                    text-decoration-color: var(--primary-color);
                     transition: var(--default-transition);
-
-                    &:hover {
-                        box-shadow: 0px 0px 4px 2px var(--primary-color);
-                        transition: var(--default-transition);
-                    }
-                }
-
-                .link-cv {
-                    margin: var(--xsmall-rem) 0 0 0;
                 }
             }
         }
@@ -655,10 +653,9 @@ nav {
 
 .link {
     transform: rotate(45deg);
-    border: 1px solid var(--primary-color);
+    box-shadow: 0px 0px 0px 2px var(--primary-color);
     width: var(--small-rhombus-rem);
     height: var(--small-rhombus-rem);
-    font-size: var(--large-rem);
     display: flex;
     justify-content: center;
     align-items: center;

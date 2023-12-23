@@ -1,5 +1,5 @@
 const homeSection = document.getElementById("id-home");
-const skillSection = document.getElementById("id-skills");
+//const skillSection = document.getElementById("id-skills");
 const contactSection = document.getElementById("id-contact");
 
 function setProperties() {
@@ -7,7 +7,7 @@ function setProperties() {
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
     homeSection.style.setProperty("height", `${vh}px`);
-    skillSection.style.setProperty("height", `${vh}px`);
+    //skillSection.style.setProperty("height", `${vh}px`);
     contactSection.style.setProperty("height", `${vh}px`);
     console.log("vw", vw, "vh", vh);
 }
@@ -15,7 +15,7 @@ function setProperties() {
 setProperties();
 
 function ChangeTheme() {
-    const btnTheme = document.querySelector(".btn-theme");
+    const btnTheme = document.querySelector(".theme-button");
     btnTheme.addEventListener('mousedown', () => {
         let element = document.body;
         element.classList.toggle('light-theme');
