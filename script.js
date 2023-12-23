@@ -1,4 +1,5 @@
 const homeSection = document.getElementById("id-home");
+const skillSection = document.getElementById("id-skills");
 const contactSection = document.getElementById("id-contact");
 
 function setProperties() {
@@ -6,6 +7,7 @@ function setProperties() {
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
     homeSection.style.setProperty("height", `${vh}px`);
+    skillSection.style.setProperty("height", `${vh}px`);
     contactSection.style.setProperty("height", `${vh}px`);
     console.log("vw", vw, "vh", vh);
 }
