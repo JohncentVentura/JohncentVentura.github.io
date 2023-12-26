@@ -27,7 +27,7 @@
     #id-about {
         .personal-container {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1.2fr;
+            grid-template-rows: 1fr 1fr;
             row-gap: var(--large-rem);
 
             .personal-image {
@@ -119,19 +119,25 @@
     }
 
     #id-works {
-        padding: var(--nav-height) 15% 15%;
+        padding: var(--nav-height) 15% 60%;
 
         .grid-container {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, 1fr) 0.8fr;
+            grid-template-rows: repeat(4, 1fr);
             gap: var(--xlarge-rem);
+        }
+
+        .clip-path-4 {
+            clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
         }
     }
 
     #id-about {
+        padding: var(--nav-height) 20% 25%;
+
         .personal-container {
             grid-template-columns: 1fr;
-            grid-template-rows: 0.5fr 1.8fr;
+            grid-template-rows: 0.5fr 0.5fr;
             row-gap: var(--large-rem);
 
             .personal-image {
@@ -153,8 +159,12 @@
         .timeline-container {
             margin: 0 0 7rem 0;
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, 1fr) 0.8fr;
+            grid-template-rows: repeat(4, 1fr);
             gap: var(--xsmall-rem);
+        }
+
+        .clip-path-1 {
+            clip-path: polygon(0 92%, 0% 100%, 100% 100%);
         }
     }
 
@@ -163,6 +173,10 @@
 
         ul {
             column-gap: var(--xxlarge-rem);
+        }
+
+        .clip-path-1 {
+            clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
         }
     }
 }
@@ -190,9 +204,37 @@
         }
     }
 
+    #id-home{
+        .grid-item-1{
+            padding: 0 15% 0 15%;
+            h1{
+                font-size: 1.8rem;
+            }
+        }
+        
+        .clip-path-1 {
+            margin: var(--nav-height) 0 0 0;
+            clip-path: polygon(100% 0, 0 0, 0 8%);
+        }
+    
+        .clip-path-2 {
+            clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
+        }
+    }
+
     #id-skills {
         .skill-container {
             padding: var(--xxlarge-rem) 0 0 0;
+        }
+
+        .clip-path-1 {
+            clip-path: polygon(0 92%, 0% 100%, 100% 100%);
+        }
+    }
+
+    #id-works{
+        .clip-path-4 {
+            clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
         }
     }
 
