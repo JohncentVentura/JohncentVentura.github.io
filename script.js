@@ -10,6 +10,7 @@
     console.log("vw", vw, "vh", vh);
 
     //Highlight section in nav
+    /*
     let navNodeList = document.querySelectorAll('nav ul li a');
 
     for (let i = 0; i < navNodeList.length - 1; i++) { //navNodeList.length - 1 since we don't include .theme-button
@@ -19,7 +20,8 @@
             }
             navNodeList[i].classList.toggle('active-nav-section');
         });
-    }    
+    }
+    */
 
     //Change theme (Start with Dark Theme)
     document.querySelector(".theme-button").addEventListener('mousedown', () => {
@@ -27,23 +29,23 @@
     });
 
     //Reveal Website Elements On Scroll
-    window.addEventListener('scroll', event =>{
+    window.addEventListener('scroll', event => {
         let revealNodeList = document.querySelectorAll('.reveal');
 
-        for(let i = 0; i < revealNodeList.length; i++){
+        for (let i = 0; i < revealNodeList.length; i++) {
             let windowHeight = window.innerHeight;
             let revealTop = revealNodeList[i].getBoundingClientRect().top;
-            let revealPoint = 150;
+            let revealPoint = 100;
 
-            if(revealTop < windowHeight - revealPoint) {
+            if (revealTop < windowHeight - revealPoint) {
                 revealNodeList[i].classList.add('reveal-active');
-            } 
-            else{
+            }
+            else {
                 revealNodeList[i].classList.remove('reveal-active');
             }
-        }    
+        }
     });
-    
+
 })();
 
 
