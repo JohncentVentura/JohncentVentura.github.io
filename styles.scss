@@ -15,6 +15,7 @@
     --nav-height: 4rem;
     --nav-background-color: #12181b;
     --nav-foreground-color: #FFFFFF;
+    --nav-grey-color: #454e56;
     --primary-color: #2da89e;
     --primary-color-2: #4ed0b3;
     --foreground-color: #FFFFFF;
@@ -26,8 +27,8 @@
 }
 
 .light-theme {
-    --nav-background-color: #000000;
-    --nav-foreground-color: #FFFFFF;
+    //--nav-background-color: #000000;
+    //--nav-foreground-color: #FFFFFF;
     --primary-color: #2b93c2;
     --primary-color-2: #35bfe5;
     --foreground-color: #191d2b;
@@ -45,10 +46,11 @@
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--foreground-color);
+    position: relative;
     font-family: 'Lato', sans-serif;
     font-size: var(--small-rem);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
     transition: var(--default-transition);
     overflow-x: hidden;
 }
@@ -107,7 +109,7 @@ nav {
                 transition: var(--default-transition);
 
                 div:last-child {
-                    margin: 0 0 0 var(--xsmall-rem);   
+                    margin: 0 0 0 var(--xsmall-rem);
                 }
 
                 &:hover {
@@ -118,6 +120,11 @@ nav {
             }
         }
     }
+}
+
+.active-nav-section {
+    background-color: var(--nav-grey-color);
+    color: var(--primary-color);
 }
 
 main {
@@ -339,7 +346,7 @@ main {
                 align-items: center;
                 transition: all 0s ease-in-out;
 
-                div:first-child{
+                div:first-child {
                     font-size: var(--medium-rem);
                     color: var(--background-color);
                 }
@@ -408,7 +415,7 @@ main {
                     .clip-path-1 {
                         clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
                     }
-    
+
                     .clip-path-2 {
                         clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
                     }
@@ -585,12 +592,13 @@ main {
                 }
             }
 
-            .contact-title{
+            .contact-title {
                 margin: var(--xlarge-rem) 0 0 0;
                 font-size: var(--medium-rem);
             }
 
-            .contact-link,span {
+            .contact-link,
+            span {
                 margin: var(--medium-rem) 0 0 0;
                 font-size: var(--medium-rem);
             }
@@ -720,6 +728,19 @@ main {
             font-size: var(--title-icon-rem);
         }
     }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal-active {
+    transform: translateY(0px);
+    opacity: 1;
+    //transition: all 2s ease;
 }
 
 @import '_media';
