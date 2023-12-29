@@ -790,11 +790,14 @@ main section {
   nav .home-logo {
     display: none;
   }
+  #id-home {
+    padding: var(--nav-height) 0 0 0;
+  }
   #id-home .grid-item-1 {
-    padding: 0 15% 0 15%;
+    padding: var(--nav-height) 15% 0 15%;
   }
   #id-home .grid-item-1 h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   #id-home .clip-path-1 {
     margin: var(--nav-height) 0 0 0;

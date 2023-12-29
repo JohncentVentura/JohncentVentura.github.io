@@ -1,3 +1,4 @@
+//Change root variables & #id-works grid
 @media screen and (max-width: 1210px) {
     :root {
         --title-rem: 2.4rem;
@@ -23,6 +24,7 @@
     }
 }
 
+//Change #id-about grid
 @media screen and (max-width: 1050px) {
     #id-about {
         .personal-container {
@@ -44,6 +46,7 @@
     }
 }
 
+//Change root variables
 @media screen and (max-width: 880px) {
     :root {
         --title-rem: 2.2rem;
@@ -205,10 +208,12 @@
     }
 
     #id-home{
+        padding: var(--nav-height) 0 0 0;
+        
         .grid-item-1{
-            padding: 0 15% 0 15%;
+            padding: var(--nav-height) 15% 0 15%;
             h1{
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
         }
         
@@ -244,6 +249,7 @@
     }
 }
 
+//Change root variables
 @media screen and (max-width: 360px) {
     :root {
         --title-rem: 1.8rem;
