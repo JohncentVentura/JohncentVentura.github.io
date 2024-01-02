@@ -18,8 +18,12 @@
     #id-works {
         .grid-container {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 1fr);
             gap: var(--xxlarge-rem);
+        }
+
+        .works-graphic-design{
+            grid-template-rows: repeat(2, 1fr);
         }
     }
 }
@@ -126,12 +130,16 @@
 
         .grid-container {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             gap: var(--xlarge-rem);
         }
 
+        .works-graphic-design{
+            grid-template-rows: repeat(3, 1fr);
+        }
+
         .clip-path-4 {
-            clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 95%, 0% 100%, 100% 100%);
         }
     }
 
@@ -179,7 +187,7 @@
         }
 
         .clip-path-1 {
-            clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
         }
     }
 }
@@ -250,7 +258,7 @@
 }
 
 //Change root variables
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 390px) {
     :root {
         --title-rem: 1.8rem;
         --title-icon-rem: 5rem;

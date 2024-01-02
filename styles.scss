@@ -301,13 +301,19 @@ main {
 
 #id-works {
     position: relative;
-    padding: var(--nav-height) 12% 15%;
+    padding: var(--nav-height) 12% 25%;
     width: 100%;
+
+    h2 {
+        margin: var(--xxlarge-rem) 0 var(--large-rem);
+        font-size: var(--large-rem);
+        text-align: center;
+    }
 
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         gap: var(--xlarge-rem);
 
         .grid-item {
@@ -429,7 +435,7 @@ main {
     }
 
     .clip-path-4 {
-        clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+        clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
     }
 }
 
@@ -552,7 +558,7 @@ main {
     }
 
     .clip-path-1 {
-        clip-path: polygon(0 85%, 0% 100%, 100% 100%);
+        clip-path: polygon(0 90%, 0% 100%, 100% 100%);
     }
 }
 

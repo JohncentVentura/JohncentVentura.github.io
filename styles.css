@@ -267,13 +267,18 @@ main section {
 
 #id-works {
   position: relative;
-  padding: var(--nav-height) 12% 15%;
+  padding: var(--nav-height) 12% 25%;
   width: 100%;
+}
+#id-works h2 {
+  margin: var(--xxlarge-rem) 0 var(--large-rem);
+  font-size: var(--large-rem);
+  text-align: center;
 }
 #id-works .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: var(--xlarge-rem);
 }
 #id-works .grid-container .grid-item {
@@ -375,8 +380,8 @@ main section {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 #id-works .clip-path-4 {
-  -webkit-clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
-          clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
 }
 
 #id-about {
@@ -482,8 +487,8 @@ main section {
   transition: var(--default-transition);
 }
 #id-about .clip-path-1 {
-  -webkit-clip-path: polygon(0 85%, 0% 100%, 100% 100%);
-          clip-path: polygon(0 85%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(0 90%, 0% 100%, 100% 100%);
+          clip-path: polygon(0 90%, 0% 100%, 100% 100%);
 }
 
 #id-contact {
@@ -665,8 +670,11 @@ main section {
   }
   #id-works .grid-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: var(--xxlarge-rem);
+  }
+  #id-works .works-graphic-design {
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 1050px) {
@@ -743,12 +751,15 @@ main section {
   }
   #id-works .grid-container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: var(--xlarge-rem);
   }
+  #id-works .works-graphic-design {
+    grid-template-rows: repeat(3, 1fr);
+  }
   #id-works .clip-path-4 {
-    -webkit-clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
-            clip-path: polygon(100% 90%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 95%, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 95%, 0% 100%, 100% 100%);
   }
   #id-about {
     padding: var(--nav-height) 20% 25%;
@@ -788,8 +799,8 @@ main section {
          column-gap: var(--xxlarge-rem);
   }
   #id-contact .clip-path-1 {
-    -webkit-clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
-            clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
   }
 }
 @media screen and (max-width: 550px) {
@@ -842,7 +853,7 @@ main section {
     height: 2.5rem;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 390px) {
   :root {
     --title-rem: 1.8rem;
     --title-icon-rem: 5rem;
