@@ -21,10 +21,6 @@
             grid-template-rows: repeat(1, 1fr);
             gap: var(--xxlarge-rem);
         }
-
-        .works-graphic-design{
-            grid-template-rows: repeat(2, 1fr);
-        }
     }
 }
 
@@ -132,10 +128,6 @@
             grid-template-columns: 1fr;
             grid-template-rows: repeat(2, 1fr);
             gap: var(--xlarge-rem);
-        }
-
-        .works-graphic-design{
-            grid-template-rows: repeat(3, 1fr);
         }
 
         .clip-path-4 {
