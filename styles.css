@@ -270,11 +270,6 @@ main section {
   padding: var(--nav-height) 12% 25%;
   width: 100%;
 }
-#id-works h2 {
-  margin: var(--xxlarge-rem) 0 var(--large-rem);
-  font-size: var(--large-rem);
-  text-align: center;
-}
 #id-works .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -673,9 +668,6 @@ main section {
     grid-template-rows: repeat(1, 1fr);
     gap: var(--xxlarge-rem);
   }
-  #id-works .works-graphic-design {
-    grid-template-rows: repeat(2, 1fr);
-  }
 }
 @media screen and (max-width: 1050px) {
   #id-about .personal-container {
@@ -753,9 +745,6 @@ main section {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: var(--xlarge-rem);
-  }
-  #id-works .works-graphic-design {
-    grid-template-rows: repeat(3, 1fr);
   }
   #id-works .clip-path-4 {
     -webkit-clip-path: polygon(100% 95%, 0% 100%, 100% 100%);
